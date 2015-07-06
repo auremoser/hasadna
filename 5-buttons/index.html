@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Template | CartoDB</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+    <style type="text/css">
+      html, body, #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #cartocss {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+      #sql {
+        position: absolute;
+        right: 292px;
+        top: 20px;
+      }
+      /*BUTTON STYLES*/
+      .layer_selector {
+        background: rgba(255,255,255,0.9);
+        border: 1px solid #999;
+        border-radius: 5px;
+        color: #666;
+        font-family: 'Helvetica', Arial, sans-serif;
+        font-size: 13px;
+        padding: 0;
+        text-align: center;
+        width: 250px;
+      }
+      .layer_selector > p {
+        border-bottom: 1px solid #999;
+        padding: 5px 10px;
+        text-transform: uppercase;
+      }
+      .layer_selector ul {
+        padding: 0; margin: 0;
+        list-style-type: none;
+      }
+      .layer_selector li {
+        color: #444;
+        cursor: pointer;
+        padding: 10px 20px;
+      }
+      .layer_selector li:not(:last-child) {
+        border-bottom: 1px solid #999;
+      }
+      .layer_selector li:hover {
+        background-color: #a8ddb5;
+        cursor: pointer;
+      }
+      .layer_selector li.selected {
+        background-color: #7bccc4;
+      }
+    </style>
+
+    <!-- SQL TEMPLATE -->
+    <script type='sql/text' id='sql'>
+      SELECT * FROM pollutant_emissions_merge
+    </script>
+
+    <!-- CHOROPLETH - Electricity VIS CSS -->
+    <style type='cartocss/text' id='electric'>
+      /** choropleth visualization */
+      #pollutant_emissions_merge{
+        polygon-fill: #FFFFCC;
+        polygon-opacity: 0.9;
+        line-color: #FFFFFF;
+        line-width: 0;
+        line-opacity: 1;
+      }
+      #pollutant_emissions_merge [ electricity <= 60980.4] {
+         polygon-fill: #253494;
+      }
+      #pollutant_emissions_merge [ electricity <= 2263.8] {
+         polygon-fill: #2C7FB8;
+      }
+      #pollutant_emissions_merge [ electricity <= 826.5] {
+         polygon-fill: #41B6C4;
+      }
+      #pollutant_emissions_merge [ electricity <= 594.4] {
+         polygon-fill: #A1DAB4;
+      }
+      #pollutant_emissions_merge [ electricity <= 479.9] {
+         polygon-fill: #FFFFCC;
+      }
+    </style>
+
+    <!-- CHOROPLETH - Industry CSS -->
+    <style type='cartocss/text' id='industry'>
+      /** choropleth visualization */
+
+      #pollutant_emissions_merge{
+        polygon-fill: #FFFFCC;
+        polygon-opacity: 0.2;
+        line-color: #FFFFFF;
+        line-width: 0;
+        line-opacity: 1;
+      }
+      #pollutant_emissions_merge [ industry <= 6590.1] {
+         polygon-fill: #253494;
+      }
+      #pollutant_emissions_merge [ industry <= 1041.9] {
+         polygon-fill: #2C7FB8;
+      }
+      #pollutant_emissions_merge [ industry <= 130.1] {
+         polygon-fill: #41B6C4;
+      }
+      #pollutant_emissions_merge [ industry <= 38.2] {
+         polygon-fill: #A1DAB4;
+      }
+      #pollutant_emissions_merge [ industry <= 15.7] {
+         polygon-fill: #FFFFCC;
+      }
+    </style>
+
+    <style type='cartocss/text' id='transport'>
+      /** choropleth visualization */
+
+      #pollutant_emissions_merge{
+        polygon-fill: #FFFFCC;
+        polygon-opacity: 0.9;
+        polygon-comp-op: darken;
+        line-color: #FFFFFF;
+        line-width: 0;
+        line-opacity: 1;
+      }
+      #pollutant_emissions_merge [ transport <= 1264.3] {
+         polygon-fill: #253494;
+      }
+      #pollutant_emissions_merge [ transport <= 628.4] {
+         polygon-fill: #2C7FB8;
+      }
+      #pollutant_emissions_merge [ transport <= 413.7] {
+         polygon-fill: #41B6C4;
+      }
+      #pollutant_emissions_merge [ transport <= 299.9] {
+         polygon-fill: #A1DAB4;
+      }
+      #pollutant_emissions_merge [ transport <= 147.4] {
+         polygon-fill: #FFFFCC;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- ADD BUTTONS -->
+    <div id="cartocss" class="layer_selector">
+        <p><strong>Layers</strong></p>
+        <ul>
+            <li data="industry">Industrial Pollution</li>
+            <li data="electric">Electrical Pollution</li>
+            <li data="transport">Transport Pollution</li>
+        </ul>
+    </div>
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <!-- place your code between the script tags below -->
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Template | CartoDB</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <!-- SQL TEMPLATE -->
+    <script type='sql/text' id='sql'>
+      SELECT * FROM pollutant_emissions_merge
+    </script>
+
+    <!-- CHOROPLETH CSS -->
+    <style type='cartocss/text' id='choropleth'>
+      /** choropleth visualization */
+
+      #pollutant_emissions_merge{
+        polygon-fill: #FFFFCC;
+        polygon-opacity: 0.8;
+        line-color: #FFFFFF;
+        line-width: 0;
+        line-opacity: 1;
+      }
+      #pollutant_emissions_merge [ industry <= 6590.1] {
+         polygon-fill: #253494;
+      }
+      #pollutant_emissions_merge [ industry <= 1041.9] {
+         polygon-fill: #2C7FB8;
+      }
+      #pollutant_emissions_merge [ industry <= 130.1] {
+         polygon-fill: #41B6C4;
+      }
+      #pollutant_emissions_merge [ industry <= 38.2] {
+         polygon-fill: #A1DAB4;
+      }
+      #pollutant_emissions_merge [ industry <= 15.7] {
+         polygon-fill: #FFFFCC;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <!-- place your code between the script tags below -->
+    <script src="main.js"></script>
+  </body>
+</html>
