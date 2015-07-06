@@ -2,7 +2,7 @@
 
 ### CONTENTS
 
-<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/flag.png" align="right" alt="tel aviv uni flag" margin="2px" height="250" width="375">
+<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/flag.png" align="right" alt="tel aviv uni flag" padding="2px" height="250" width="375">
 
 This repo contains "code checkpoints" for a workshop outlined [here]().
 
