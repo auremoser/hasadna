@@ -17,7 +17,7 @@ The **Pollution Map** uses data merged from Israeli [municipality geojson polygo
 
 All images used in the tutorial are available in the `img` directory.
 
-<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/map.jpg" align="center" alt="map" margin="5px" height="450" width="700">
+<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/map.jpg" align="center" alt="map">
 
 ### LINKS
 Here are some helpful references for moving forward or troubleshooting what you find here:
