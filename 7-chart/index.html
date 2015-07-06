@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	 <title>Industrial Pollution IS </title>
+	 <title>Industrial Pollution IL </title>
 	 <script src="http://www.chartjs.org/assets/Chart.js"></script>
 	 <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
         <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
 		<script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
 		<style>
+      html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
 		  canvas {
-        height: 500px;
+        height: 600px;
         margin: 10px;
         padding: 5px;
-        width: 850px;
+        width: 900px;
         font-size: 13px;
 			}
+      #info {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+      }
+      .info {
+        background: rgba(255,255,255,0.9);
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-family: 'Consolas', sans-serif;
+        font-size: 13px;
+        /*margin: 15px;
+        pad*/ding: 5px;
+        text-align: center;
+        width: 200px;
+        z-index: 100;
+      }
+      .info-title {
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .info-sql {
+        font-size: 11px;
+        text-align: left;
+        padding: 5px;
+        margin: 0px;
+      }
+      .info-sql h4{
+        color: #41B6C4;
+        margin: 0px;
+        padding: 0px;
+      }
+      footer {
+        background: rgba(255,255,255,0.9);
+        color: #A1DAB4;
+        font-family: 'Consolas', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0px;
+        position: fixed;
+        padding: 20px;
+        top: 70%;
+        width: 100%;
+      }
+      footer h5 {
+        color: #41B6C4;
+      }
 		</style>
 	</head>
 	<body>
     <canvas id="canvas"></canvas>
+    <div id="info" class="info">
+      <div class='info-title'> SQL API Query</div>
+        <ul class="info-sql">
+          <h4>SELECT</h4> * <h4>FROM</h4> pollutant_emissions_merge <h4>WHERE</h4> mun_eng <> 'No Jurisdiction' <strong>ORDER BY</strong> industry <strong>LIMIT</strong> 50
+        </ul>
+      </div>
+    </div>
+    <footer>IL Air Pollution: <strong> a small SQL API demo</strong></footer>
     <script>
 
       var sql = cartodb.SQL({ user: 'aureliamoser' });
