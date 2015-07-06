@@ -1,13 +1,13 @@
 # Hasadna: Pollution Mapping + CartoDB
 
+<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/flag.png" align="right" alt="tel aviv uni flag" margin="2px" height="250" width="325">
+
 ### CONTENTS
 This repo contains "code checkpoints" for a workshop outlined [here]().
 
 There are reference anchors throughout the outline for when to consult these checkpoints, in case you get lost or want to move at an alternate pace.
 
 The **Pollution Map** uses data merged from Israeli [municipality geojson polygons](https://github.com/idoivri/israel-municipalities-polygons) and [this pollution map](http://idoivri.github.io/airpollution/).
-
-<img src="https://raw.githubusercontent.com/auremoser/hasadna/master/img/flag.png" align="center" alt="tel aviv uni flag" margin="5px" height="450" width="700">
 
 * VisJson - ckpt-1-visjson
 * CreateVis Method - ckpt-2-createVis
