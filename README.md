@@ -1,4 +1,4 @@
-# Hasadna: Pollution Cartography + CartoDB
+# Hasadna: Pollution Mapping + CartoDB
 
 ### CONTENTS
 This repo contains "code checkpoints" for a workshop outlined [here]().
