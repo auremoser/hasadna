@@ -1,0 +1,350 @@
+{
+id: "f1af78c8-23c7-11e5-bff0-0e9d821ea90d",
+version: "0.1.0",
+title: "is-hasadna",
+likes: 0,
+description: "<p>Pollution Data by Municipalty. Source on <a href="https://github.com/idoivri/israel-municipalities-polygons">github</a>.</p> ",
+scrollwheel: false,
+legends: true,
+url: null,
+map_provider: "leaflet",
+bounds: [
+[
+30.41078179084589,
+32.1624755859375
+],
+[
+33.33511774753217,
+39.5562744140625
+]
+],
+center: "[31.886886525780806, 35.859375]",
+zoom: 8,
+updated_at: "2015-07-06T12:47:22+00:00",
+layers: [
+{
+options: {
+visible: true,
+type: "Tiled",
+id: "9b66353c-ef69-47d2-9023-a5b3f684bb2e",
+order: 0,
+name: "Positron",
+className: "httpscartodbbasemapssglobalsslfastlynetlight_allzxypng",
+base_type: "default",
+urlTemplate: "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+read_only: true,
+minZoom: "0",
+maxZoom: "18",
+attribution: "© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href= "http://cartodb.com/attributions">CartoDB</a>",
+subdomains: "abcd",
+style: null,
+category: "CartoDB",
+parent_id: null
+},
+infowindow: null,
+tooltip: null,
+id: "9b66353c-ef69-47d2-9023-a5b3f684bb2e",
+order: 0,
+parent_id: null,
+children: [ ],
+type: "tiled"
+},
+{
+type: "layergroup",
+options: {
+user_name: "aureliamoser",
+maps_api_template: "https://{user}.cartodb.com:443",
+sql_api_template: "https://{user}.cartodb.com:443",
+tiler_protocol: "http",
+tiler_domain: "cartodb.com",
+tiler_port: "80",
+sql_api_protocol: "http",
+sql_api_domain: "cartodb.com",
+sql_api_endpoint: "/api/v2/sql",
+sql_api_port: 80,
+cdn_url: {
+http: "ashbu.cartocdn.com",
+https: "cartocdn-ashbu.global.ssl.fastly.net"
+},
+dynamic_cdn: false,
+filter: "mapnik",
+layer_definition: {
+stat_tag: "f1af78c8-23c7-11e5-bff0-0e9d821ea90d",
+version: "1.0.1",
+layers: [
+{
+id: "88904605-f8ef-40ad-b314-b9951f0b4f9b",
+parent_id: null,
+children: [ ],
+type: "CartoDB",
+infowindow: {
+fields: [ ],
+template_name: "table/views/infowindow_light",
+template: "<div class="cartodb-popup v2"> <a href="#close" class="cartodb-popup-close-button close">x</a> <div class="cartodb-popup-content-wrapper"> <div class="cartodb-popup-content"> {{#content.fields}} {{#title}}<h4>{{title}}</h4>{{/title}} {{#value}} <p {{#type}}class="{{ type }}"{{/type}}>{{{ value }}}</p> {{/value}} {{^value}} <p class="empty">null</p> {{/value}} {{/content.fields}} </div> </div> <div class="cartodb-popup-tip-container"></div> </div> ",
+alternative_names: { },
+width: 226,
+maxHeight: 180
+},
+tooltip: {
+fields: [ ],
+template_name: "tooltip_light",
+template: "<div class="cartodb-tooltip-content-wrapper"> <div class="cartodb-tooltip-content"> {{#fields}} {{#title}} <h4>{{title}}</h4> {{/title}} <p>{{{ value }}}</p> {{/fields}} </div> <div>",
+alternative_names: { },
+maxHeight: 180
+},
+legend: {
+type: "none",
+show_title: false,
+title: "",
+template: "",
+visible: true
+},
+order: 1,
+visible: true,
+options: {
+sql: "select * from municipalities_2039",
+layer_name: "municipalities_2039",
+cartocss: "/** simple visualization */ #municipalities_2039{ polygon-fill: #5CA2D1; polygon-opacity: 0.7; line-color: #FFF; line-width: 0.5; line-opacity: 1; }",
+cartocss_version: "2.1.1",
+interactivity: "cartodb_id",
+table_name: """.",
+dynamic_cdn: false
+}
+},
+{
+id: "591d8d7b-fdb2-485f-920b-ca0cc8af31f9",
+parent_id: null,
+children: [ ],
+type: "CartoDB",
+infowindow: {
+fields: [ ],
+template_name: "table/views/infowindow_light",
+template: "<div class="cartodb-popup v2"> <a href="#close" class="cartodb-popup-close-button close">x</a> <div class="cartodb-popup-content-wrapper"> <div class="cartodb-popup-content"> {{#content.fields}} {{#title}}<h4>{{title}}</h4>{{/title}} {{#value}} <p {{#type}}class="{{ type }}"{{/type}}>{{{ value }}}</p> {{/value}} {{^value}} <p class="empty">null</p> {{/value}} {{/content.fields}} </div> </div> <div class="cartodb-popup-tip-container"></div> </div> ",
+alternative_names: { },
+width: 226,
+maxHeight: 180
+},
+tooltip: {
+fields: [
+{
+position: 1,
+name: "electricity",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_10",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_11",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_12",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_13",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_14",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_15",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_16",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_2",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_6",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_7",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_8",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "field_9",
+title: true
+},
+{
+position: 13,
+name: "industry",
+title: true
+},
+{
+position: 14,
+name: "mun_eng",
+title: true
+},
+{
+position: 15,
+name: "mun_heb",
+title: true
+},
+{
+position: 1.7976931348623157e+308,
+name: "municipality",
+title: true
+},
+{
+position: 17,
+name: "transport",
+title: true
+}
+],
+template_name: "",
+template: "<div class="cartodb-tooltip-content-wrapper"> <div class="cartodb-tooltip-content"> <h3>{{mun_heb}}</h3> <p>{{mun_eng}}</p> <h4>industry</h4> <p>{{industry}}</p> <h4>transport</h4> <p>{{transport}}</p> <h4>electricity</h4> <p>{{electricity}}</p> </div> </div>",
+alternative_names: { },
+maxHeight: 180
+},
+legend: {
+type: "choropleth",
+show_title: true,
+title: "Industry Pollutant Level",
+template: "",
+visible: true,
+items: [
+{
+name: "Left label",
+visible: true,
+value: "15.70",
+type: "text"
+},
+{
+name: "Right label",
+visible: true,
+value: "6590.10",
+type: "text"
+},
+{
+name: "Color",
+visible: true,
+value: "#FFFFCC",
+type: "color"
+},
+{
+name: "Color",
+visible: true,
+value: "#A1DAB4",
+type: "color"
+},
+{
+name: "Color",
+visible: true,
+value: "#41B6C4",
+type: "color"
+},
+{
+name: "Color",
+visible: true,
+value: "#2C7FB8",
+type: "color"
+},
+{
+name: "Color",
+visible: true,
+value: "#253494",
+type: "color"
+}
+]
+},
+order: 2,
+visible: true,
+options: {
+sql: "select * from pollutant_emissions_merge",
+layer_name: "pollutant_industry_merge",
+cartocss: "/** choropleth visualization */ #pollutant_emissions_merge{ polygon-fill: #FFFFCC; polygon-opacity: 0.8; line-color: #FFFFFF; line-width: 0; line-opacity: 1; } #pollutant_emissions_merge [ industry <= 6590.1] { polygon-fill: #253494; } #pollutant_emissions_merge [ industry <= 1041.9] { polygon-fill: #2C7FB8; } #pollutant_emissions_merge [ industry <= 130.1] { polygon-fill: #41B6C4; } #pollutant_emissions_merge [ industry <= 38.2] { polygon-fill: #A1DAB4; } #pollutant_emissions_merge [ industry <= 15.7] { polygon-fill: #FFFFCC; }",
+cartocss_version: "2.1.1",
+interactivity: "cartodb_id,electricity,field_10,field_11,field_12,field_13,field_14,field_15,field_16,field_2,field_6,field_7,field_8,field_9,industry,mun_eng,mun_heb,municipality,transport",
+table_name: """.",
+dynamic_cdn: false
+}
+}
+]
+}
+}
+}
+],
+overlays: [
+{
+type: "share",
+order: 2,
+options: {
+display: true,
+x: 20,
+y: 20
+},
+template: ""
+},
+{
+type: "search",
+order: 3,
+options: {
+display: true,
+x: 60,
+y: 20
+},
+template: ""
+},
+{
+type: "zoom",
+order: 6,
+options: {
+display: true,
+x: 20,
+y: 20
+},
+template: "<a href="#zoom_in" class="zoom_in">+</a> <a href="#zoom_out" class="zoom_out">-</a>"
+},
+{
+type: "loader",
+order: 8,
+options: {
+display: true,
+x: 20,
+y: 150
+},
+template: "<div class="loader" original-title=""></div>"
+},
+{
+type: "logo",
+order: 9,
+options: {
+display: true,
+x: 10,
+y: 40
+},
+template: ""
+}
+],
+prev: null,
+next: null,
+transition_options: {
+time: 0
+}
+}
