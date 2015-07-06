@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <title>Industrial Pollution IS </title>
+	 <script src="http://www.chartjs.org/assets/Chart.js"></script>
+	 <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+		<script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
+		<style>
+		  canvas {
+        height: 500px;
+        margin: 10px;
+        padding: 5px;
+        width: 850px;
+        font-size: 13px;
+			}
+		</style>
+	</head>
+	<body>
+    <canvas id="canvas"></canvas>
+    <script>
+
+      var sql = cartodb.SQL({ user: 'aureliamoser' });
+
+      sql.execute("SELECT * FROM pollutant_emissions_merge WHERE mun_eng <> 'No Jurisdiction' ORDER BY industry LIMIT 50")
+          .done(function(data) {
+        	 console.log(data);
+      var total = [];
+      var labels  = [];
+
+      for (i in data.rows) {
+        total.push(data.rows[i].industry);
+        labels.push(data.rows[i].mun_eng);
+      }
+        console.log(data);
+        var lineChartData = {
+    			labels : labels,
+    		  datasets : [
+    				{
+                barDatasetSpacing : 0,
+                barValueSpacing : 0,
+                fillColor : "#A1DAB4",
+    						strokeColor : "#A1DAB4",
+                tooltipFillColor: "#41B6C4",
+    						pointColor : "#005824",
+    						pointStrokeColor : "#fff",
+    						data : total
+    				}
+    			]
+			   }
+      var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(lineChartData);
+	   });
+	 </script>
+	</body>
+</html>
